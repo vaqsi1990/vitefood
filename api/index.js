@@ -19,7 +19,8 @@ app.use(express.json())
 app.use('/uploads',express.static(__dirname + '/uploads') )
 const allowedOrigins = [
     'http://localhost:5173',
-    'https://food-blog-vaqsi.vercel.app'
+    'https://food-blog-vaqsi.vercel.app',
+    'https://vitefood-a2plonmu5-vaqsis-projects.vercel.app/'
 ];
 
 app.use(cors({
