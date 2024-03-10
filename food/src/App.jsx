@@ -18,7 +18,8 @@ import Users from './Pages/Users'
 import SingleUser from './Pages/SingleUser';
 import AdminItems from './Pages/AdminItems';
 import About from './Pages/About';
-axios.defaults.baseURL = "vitefood-git-main-vaqsis-projects.vercel.app"
+axios.defaults.baseURL = "https://vitefood-im941sw9i-vaqsis-projects.vercel.app"
+
 axios.defaults.withCredentials = true
 function App() {
   return (
