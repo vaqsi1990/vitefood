@@ -11,7 +11,7 @@ export default function IndexPage() {
     const [search, setSearch] = useState('');
   
     useEffect(() => {
-      axios.get('https://food-blog-vaqsi.vercel.app/allFood').then((res) => {
+      axios.get('https://vitefood-d1az2ebev-vaqsis-projects.vercel.app/allFood').then((res) => {
         setFood(res.data);
       });
     }, []);
