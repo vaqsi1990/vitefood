@@ -18,13 +18,15 @@ const mime = require('mime-types');
 app.use(express.json())
 app.use('/uploads',express.static(__dirname + '/uploads') )
 const corsOpts = {
-  origin: 'https://food-blog-vaqsi.vercel.app',
+  origin: ['https://food-blog-vaqsi.vercel.app', 'https://vitefood-m6kws8dyw-vaqsis-projects.vercel.app'],
   credentials: true,
-  methods: ['GET','POST','HEAD','PUT','PATCH','DELETE'],
+  methods: ['GET', 'POST', 'HEAD', 'PUT', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type'],
   exposedHeaders: ['Content-Type']
 };
+
 app.use(cors(corsOpts));
+
 
 async function uploadToS3(path, originalFilename, mimetype) {
   const client = new S3Client({
