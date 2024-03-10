@@ -17,23 +17,9 @@ const fs = require('fs')
 const mime = require('mime-types');
 app.use(express.json())
 app.use('/uploads',express.static(__dirname + '/uploads') )
-const allowedOrigins = [
-    'http://localhost:5173',
-    'https://food-blog-vaqsi.vercel.app',
-      'https://vitefood-im941sw9i-vaqsis-projects.vercel.app',
-      'https://vitefood-5o5k3ijcz-vaqsis-projects.vercel.app',
-    'https://vitefood-a2plonmu5-vaqsis-projects.vercel.app'
-];
-
 app.use(cors({
-  origin: function (origin, callback) {
-    if (allowedOrigins.includes(origin) || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true 
+  credentials: true,
+  origin: 'https://vitefood-d1az2ebev-vaqsis-projects.vercel.app',
 }));
 
 async function uploadToS3(path, originalFilename, mimetype) {
