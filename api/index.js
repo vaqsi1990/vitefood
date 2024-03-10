@@ -20,6 +20,8 @@ app.use('/uploads',express.static(__dirname + '/uploads') )
 const allowedOrigins = [
     'http://localhost:5173',
     'https://food-blog-vaqsi.vercel.app',
+      'https://vitefood-im941sw9i-vaqsis-projects.vercel.app',
+      'https://vitefood-5o5k3ijcz-vaqsis-projects.vercel.app',
     'https://vitefood-a2plonmu5-vaqsis-projects.vercel.app'
 ];
 
