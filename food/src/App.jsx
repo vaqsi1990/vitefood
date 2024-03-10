@@ -18,7 +18,7 @@ import Users from './Pages/Users'
 import SingleUser from './Pages/SingleUser';
 import AdminItems from './Pages/AdminItems';
 import About from './Pages/About';
-axios.defaults.baseURL = import.meta.env.VITE_URL
+axios.defaults.baseURL = "https://food-blog-vaqsi.vercel.app"
 
 axios.defaults.withCredentials = true
 function App() {
